@@ -16,7 +16,7 @@ mkdir -p /run/user/0
 chown root:root /run/user/0
 export XDG_RUNTIME_DIR=/run/user/0
 apt install -y dbus-x11
-dbus-run-session -- bash
+#dbus-run-session -- bash
 #Configure VNC Server
 USER=root tightvncserver :1
 USER=root tightvncserver -kill :1
