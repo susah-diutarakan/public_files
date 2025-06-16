@@ -20,19 +20,11 @@ dbus-run-session -- bash
 #Configure VNC Server
 USER=root tightvncserver :1
 USER=root tightvncserver -kill :1
-#Clipboard
-apt install -y tightvncserver autocutsel
-#Keyboard
-apt install xserver-xorg xkb-data
-#SSL
-apt install -y openssl
+#Clipboard Keyboard SSL TaskBar Black BG
+apt install -y tightvncserver autocutsel xserver-xorg xkb-data openssl tint2 feh x11-xserver-utils
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /opt/novnc/novnc.key -out /opt/novnc/novnc.crt
-#TaskBar
-apt install tint2
 sed -i -e '$a\' /etc/xdg/openbox/autostart  
 sed -i -e '$atint2 &' /etc/xdg/openbox/autostart
-#Black BG
-apt install feh x11-xserver-utils
 sed -i -e '$a\' /etc/xdg/openbox/autostart  
 sed -i -e '$axsetroot -solid black &' /etc/xdg/openbox/autostart
 #Startup file
