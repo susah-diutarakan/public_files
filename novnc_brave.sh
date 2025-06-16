@@ -41,12 +41,12 @@ dbus-run-session -- sh -c "openbox-session & brave-browser --no-sandbox --disabl
 #x11vnc -display :1 -forever -shared -repeat
 x11vnc -display :1 -noxrecord -noxfixes -noxdamage -repeat -capslock -nomodtweak -noxkb' > ~/.vnc/xstartup
 chmod +x ~/.vnc/xstartup
-wget https://raw.githubusercontent.com/susah-diutarakan/public_files/refs/heads/main/stop_brave.sh
-wget https://raw.githubusercontent.com/susah-diutarakan/public_files/refs/heads/main/start_brave.sh
-wget https://raw.githubusercontent.com/susah-diutarakan/public_files/refs/heads/main/launch_brave.sh
-wget https://raw.githubusercontent.com/susah-diutarakan/public_files/refs/heads/main/launch_brave2.sh
-wget https://raw.githubusercontent.com/susah-diutarakan/public_files/refs/heads/main/launch_grass.sh
-wget https://raw.githubusercontent.com/susah-diutarakan/public_files/refs/heads/main/menu.xml
+wget https://raw.githubusercontent.com/susah-diutarakan/public_files/main/stop_brave.sh
+wget https://raw.githubusercontent.com/susah-diutarakan/public_files/main/start_brave.sh
+wget https://raw.githubusercontent.com/susah-diutarakan/public_files/main/launch_brave.sh
+wget https://raw.githubusercontent.com/susah-diutarakan/public_files/main/launch_brave2.sh
+wget https://raw.githubusercontent.com/susah-diutarakan/public_files/main/launch_grass.sh
+wget https://raw.githubusercontent.com/susah-diutarakan/public_files/main/menu.xml
 chmod +x *.sh
 mv -f menu.xml /etc/xdg/openbox/menu.xml
 sed -i '/<\/head>/i \
