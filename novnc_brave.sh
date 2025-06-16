@@ -49,3 +49,14 @@ wget https://raw.githubusercontent.com/susah-diutarakan/public_files/refs/heads/
 wget https://raw.githubusercontent.com/susah-diutarakan/public_files/refs/heads/main/menu.xml
 chmod +x *.sh
 mv -f menu.xml /etc/xdg/openbox/menu.xml
+sed -i '/<\/head>/i \
+<script>\
+\n  if (!crypto.randomUUID) {\
+\n      crypto.randomUUID = function() {\
+\n      return '\''xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'\''.replace(/[xy]/g, function(c) {\
+\n        const r = Math.random() * 16 | 0;\
+\n        return (c === '\''x'\'' ? r : (r & 0x3 | 0x8)).toString(16);\
+\n      });\
+\n    };\
+\n  }\
+\n</script>' /opt/novnc/vnc.html
