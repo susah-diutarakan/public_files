@@ -60,3 +60,6 @@ sed -i '/<\/head>/i \
 \n    };\
 \n  }\
 \n</script>' /opt/novnc/vnc.html
+echo "Installation completed!"
+echo "run ./start_brave.sh to start NoVNC + Brave Browser"
+echo "to stop Press ctrl+c and run ./stop_brave.sh"
