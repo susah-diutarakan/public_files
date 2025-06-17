@@ -31,7 +31,7 @@ echo '#!/bin/sh
 
 Xvfb :1 -screen 0 1920x1080x24 -extension XKB -ac +extension GLX +extension RANDR &
 export DISPLAY=:1
-sleep 1
+sleep 2
 #setxkbmap -layout us -variant intl &
 vncconfig -nowin &
 autocutsel -fork &
