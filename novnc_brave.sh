@@ -20,7 +20,7 @@ apt install -y dbus-x11
 USER=root tightvncserver :1
 USER=root tightvncserver -kill :1
 #Clipboard Keyboard SSL TaskBar Black BG
-apt install -y tightvncserver autocutsel xserver-xorg xkb-data openssl tint2 feh x11-xserver-utils
+apt install -y autocutsel xserver-xorg xkb-data openssl tint2 feh x11-xserver-utils
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /opt/novnc/novnc.key -out /opt/novnc/novnc.crt
 sed -i -e '$a\' /etc/xdg/openbox/autostart  
 sed -i -e '$atint2 &' /etc/xdg/openbox/autostart
@@ -33,7 +33,6 @@ Xvfb :1 -screen 0 1920x1080x24 -extension XKB -ac +extension GLX +extension RAND
 export DISPLAY=:1
 sleep 2
 #setxkbmap -layout us -variant intl &
-vncconfig -nowin &
 autocutsel -fork &
 setxkbmap us &
 dbus-run-session -- sh -c "openbox-session & brave-browser --no-sandbox --disable-dev-shm-usage " & 
