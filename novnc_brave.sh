@@ -36,7 +36,7 @@ sleep 2
 vncconfig -nowin &
 autocutsel -fork &
 setxkbmap us &
-dbus-run-session -- sh -c "openbox-session & brave-browser --no-sandbox --disable-dev-shm-usage "
+dbus-run-session -- sh -c "openbox-session & brave-browser --no-sandbox --disable-dev-shm-usage " & 
 #x11vnc -display :1 -forever -shared -repeat
 x11vnc -display :1 -noxrecord -noxfixes -noxdamage -repeat -capslock -nomodtweak -noxkb' > ~/.vnc/xstartup
 chmod +x ~/.vnc/xstartup
