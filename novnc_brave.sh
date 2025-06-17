@@ -38,7 +38,7 @@ autocutsel -fork &
 setxkbmap us &
 dbus-run-session -- sh -c "openbox-session & brave-browser --no-sandbox --disable-dev-shm-usage " & 
 #x11vnc -display :1 -forever -shared -repeat
-x11vnc -display :1 -noxrecord -noxfixes -noxdamage -repeat -capslock -nomodtweak -noxkb' > ~/.vnc/xstartup
+x11vnc -display :1 -noxrecord -noxfixes -noxdamage -repeat -capslock -nomodtweak -noxkb -forever' > ~/.vnc/xstartup
 chmod +x ~/.vnc/xstartup
 wget -O stop_brave.sh https://raw.githubusercontent.com/susah-diutarakan/public_files/main/stop_brave.sh
 wget -O start_brave.sh https://raw.githubusercontent.com/susah-diutarakan/public_files/main/start_brave.sh
